@@ -46,6 +46,7 @@ app.use((err,req,res,next)=>{
 })
 
 app.use(Express.json())
+app.use(cors());
 
     
 app.use("/auth", authRouter)
@@ -58,7 +59,6 @@ app.use("/comment", commentRouter)
 app.use(Express.json());
 app.use(helmet());
 app.use(morgan("common"));
-app.use(cors());
 app.use(cookieParser())
 
 
